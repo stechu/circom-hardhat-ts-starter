@@ -39,4 +39,4 @@ Try running following tasks:
 ```shell
 yarn hardhat circom --verbose
 ```
-It should generate a `MulVerifier.sol` file.
+It should generate a `MulVerifier.sol` file. Also you can see `mul.r1cs`, `mul.vkey.json`, `mul.wasm`, and `mul.zkey` generated under `./circuits`.
