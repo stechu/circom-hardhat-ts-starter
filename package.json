@@ -1,9 +1,9 @@
 {
-  "name": "circom-hardhat-ts-tutorial",
+  "name": "circom-hardhat-ts-starter",
   "version": "0.7.0",
   "description": "learn how to build a circom project using hardhat",
   "main": "index.js",
-  "repository": "git@github.com:stechu/Circom-Hardhat-Tutorial.git",
+  "repository": "git@github.com:stechu/Circom-Hardhat-TS-Starter.git",
   "author": "Shumo Chu <shumo.chu@protonmail.com>",
   "license": "MIT",
   "devDependencies": {
