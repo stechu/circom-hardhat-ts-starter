@@ -1,6 +1,5 @@
 # Circom-Hardhat-TS-Starter
 
-
 A step to step guide:
 
 ## Create a project and install dependencies 
@@ -10,23 +9,34 @@ A step to step guide:
     ```
 2. Install dependencies
     ```shell
-    yarn add circomlib chai hardhat hardhat-circom --dev
+    yarn add --dev circomlib chai hardhat hardhat-circom typescript ts-node chai @types/node @types/mocha @types/chai @nomiclabs/hardhat-ethers @nomicfoundation/hardhat-chai-matchers @nomicfoundation/hardhat-toolbox @nomiclabs/hardhat-ethers  @nomiclabs/hardhat-etherscan typechain @typechain/hardhat hardhat-gas-reporter  solidity-coverage @typechain/ethers-v5 @nomicfoundation/hardhat-network-helpers ethers @ethersproject/abi
     ```
 3. Start a hardhat project (yes, you need to remove `README.md`)
     ```shell
     yarn hardhat
     ```
+4. Add the following code snippet to `hardhat.config.ts` (in `config`):
+    ```json
+    circom: {
+        inputBasePath: "./circuits",
+        ptau: "https://hermezptau.blob.core.windows.net/ptau/powersOfTau28_hez_final_15.ptau",
+        circuits: [
+        { name: "mul"}
+        ]
+    }
+    ```
+5. sanity check:
+Try running following tasks:
 
-
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
-
+    ```shell
+    yarn hardhat help
+    yarn hardhat test
+    REPORT_GAS=true yarn hardhat test
+    yarn hardhat node
+    yarn hardhat run scripts/deploy.ts
+    ```
+## Generate verifier contract for the circuit
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+yarn hardhat circom --verbose
 ```
+It should generate a `MulVerifier.sol` file.
