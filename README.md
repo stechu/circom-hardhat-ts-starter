@@ -1,8 +1,12 @@
 # Circom-Hardhat-TS-Starter
 
-A step to step guide:
+## Usage
+1. Fork this repo, and `yarn install`
+2. follow the [step to step guide](#a-step-to-step-guide) 
 
-## Create a project and install dependencies 
+## A step to step guide:
+
+### Create a project and install dependencies 
 1. create a yarn project
     ```shell
     yarn init
@@ -35,7 +39,7 @@ Try running following tasks:
     yarn hardhat node
     yarn hardhat run scripts/deploy.ts
     ```
-## Generate verifier contract for the circuit
+### Generate verifier contract for the circuit
 ```shell
 yarn hardhat circom --verbose
 ```
