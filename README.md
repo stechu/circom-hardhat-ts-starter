@@ -16,7 +16,7 @@ A step to step guide:
     yarn hardhat
     ```
 4. Add the following code snippet to `hardhat.config.ts` (in `config`):
-    ```json
+    ```typescript
     circom: {
         inputBasePath: "./circuits",
         ptau: "https://hermezptau.blob.core.windows.net/ptau/powersOfTau28_hez_final_15.ptau",
